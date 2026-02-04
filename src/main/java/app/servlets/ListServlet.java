@@ -1,5 +1,6 @@
 package app.servlets;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -11,7 +12,7 @@ public class ListServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        PrintWriter writer = resp.getWriter();
-        writer.println("Method GET form ListServlet");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/views/list.jsp");
+        dispatcher.forward(req, resp);
     }
 }
