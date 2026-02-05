@@ -10,8 +10,8 @@
           <element id="library" level="project" name="Maven: org.jetbrains:annotations:26.0.2-1" />
         </element>
       </element>
-      <element id="javaee-facet-resources" facet="adding_viewing_users/web/Web" />
       <element id="javaee-facet-resources" facet="adding_viewing_users/web/Web2" />
+      <element id="javaee-facet-resources" facet="adding_viewing_users/web/Web" />
     </root>
   </artifact>
 </component>
