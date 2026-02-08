@@ -42,7 +42,7 @@
     </div>
 
     <div>
-        <button onclick="locatiin.href='/"> Back to main</button>
+        <button onclick="location.href='/adding_viewing_users_war_exploded/'"> Back to main</button>
     </div>
 </body>
 </html>

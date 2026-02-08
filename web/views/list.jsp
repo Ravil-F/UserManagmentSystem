@@ -1,10 +1,5 @@
-<%@ page import="java.util.List" %><%--
-  Created by IntelliJ IDEA.
-  User: Home
-  Date: 04.02.2026
-  Time: 14:27
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="java.util.List" %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
     <head>
@@ -13,13 +8,13 @@
     <body>
         <div>
             <h1>Super app!</h1>
-        </div
+        </div>
 
         <div>
             <div>
                 <div>
                     <h2> Users </h2>
-                </div
+                </div>
 
                 <%
                     List<String> names = (List<String>) request.getAttribute("userNames");
@@ -28,14 +23,14 @@
                         for(String s : names){
                             out.println("<li>" + s + "</li>");
                         }
-                        out.println("/ui");
+                        out.println("</ui>");
                     }else out.println("<p> There are no users yet!</p>");
-                >%
+                %>
             </div
-        </div
+        </div>
 
         <div>
-            <button onclick="location.href='/'"> Back to main</button>
+            <button onclick="location.href='/adding_viewing_users_war_exploded/'"> Back to main</button>
         </div>
 
     </body>
