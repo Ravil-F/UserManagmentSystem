@@ -20,7 +20,6 @@ public class DelServlet extends HttpServlet {
 
         RequestDispatcher dispatcher = req.getRequestDispatcher("/views/del.jsp");
         dispatcher.forward(req, resp);
-
     }
 
     @Override
@@ -30,6 +29,7 @@ public class DelServlet extends HttpServlet {
         model.del(delName);
 
 //        resp.sendRedirect(req.getContextPath() + "/del");
+        doGet(req, resp);
     }
 
 }
