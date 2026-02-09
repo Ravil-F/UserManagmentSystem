@@ -24,9 +24,33 @@ public class Model {
         model.add(user);
     }
 
-    public List<String> list(){
+    public List<String> listName(){
         return model.stream()
                 .map(User::getName)
+                .collect(Collectors.toList());
+    }
+
+    public List<String> listLastName(){
+        return model.stream()
+                .map(User::getLastName)
+                .collect(Collectors.toList());
+    }
+
+    public List<Character> listGender(){
+        return model.stream()
+                .map(User::getGender)
+                .collect(Collectors.toList());
+    }
+
+    public List<Integer> listAge(){
+        return model.stream()
+                .map(User::getAge)
+                .collect(Collectors.toList());
+    }
+
+    public List<String> listEmail(){
+        return model.stream()
+                .map(User::getEmail)
                 .collect(Collectors.toList());
     }
 

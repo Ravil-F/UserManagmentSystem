@@ -32,8 +32,16 @@
                     <input type="text" name="name"><br/><br/>
                 </label>
 
-                <label>Password
-                    <input type="password" name="pass"> <br/><br/>
+                <label>Gender
+                    <input type="text" name="gender"> <br/><br/>
+                </label>
+
+                <label>Age
+                    <input type="text" name="text"> <br/><br/>
+                </label>
+
+                <label>Email
+                    <input type="text" name="email"> <br/><br/>
                 </label>
 
                 <button type="submit">Submit</button>

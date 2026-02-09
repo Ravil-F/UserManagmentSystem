@@ -11,10 +11,9 @@ import java.io.IOException;
 import java.util.List;
 
 public class DelSetvlet extends HttpServlet {
-    protected void goGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Model model = Model.getInstance();
-        List<String> names = model.list();
-        req.setAttribute("userNames", names);
+        Utils.setUserAttiributes(req);
 
         String delName = req.getParameter("name");
         model.del(delName);
