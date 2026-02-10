@@ -5,52 +5,66 @@
   Time: 14:27
   To change this template use File | Settings | File Templates.
 --%>
+<!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<html lang="ru">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Add new user </title>
+    <link rel="stylesheet" href="../css/style_add.css">
 </head>
 <body>
-    <div> <h1>Super app</h1> </div>
+    <header>
+        <h1>Super app!</h1> 
+    </header>
 
-    </div>
-        <div>
+    <main>
+        <section class="added_information">
             <%
                 if(request.getAttribute("userName") != null)
                     out.println("<p>User '" + request.getAttribute("userName") + "' added!</p>");
             %>
-        </div>
+        </section>
 
-        <div>
-            <div>
-                <h2>
-                    Add user
-                </h2>
-            </div>
+        <section class="add">
+            <h2>
+                Add user
+            </h2>
             <form method="post">
                 <label>Name:
-                    <input type="text" name="name"><br/><br/>
+                    <input type="text" name="name">
                 </label>
 
-                <label>Gender
-                    <input type="text" name="gender"> <br/><br/>
+                <label>Last name:
+                    <input type="text" name="lastName">
                 </label>
 
-                <label>Age
-                    <input type="text" name="text"> <br/><br/>
+                <label>Gender:
+                    <select>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
                 </label>
 
-                <label>Email
-                    <input type="text" name="email"> <br/><br/>
+                 <label>Age:
+                    <select class="age">
+                        
+                    </select>
                 </label>
 
+                <label class="email">Email:
+                    <input type="password" name="email">
+                </label>
                 <button type="submit">Submit</button>
             </form>
-        </div>
-    </div>
+        </section>
+    </main>
 
-    <div>
+    <footer>
         <button onclick="location.href='/adding_viewing_users_war_exploded/'"> Back to main</button>
-    </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>
