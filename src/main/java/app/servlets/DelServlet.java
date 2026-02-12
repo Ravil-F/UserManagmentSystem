@@ -20,7 +20,7 @@ public class DelServlet extends HttpServlet {
         String delName = req.getParameter("name");
         model.del(delName);
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("views/del.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/views/del.jsp");
         dispatcher.forward(req, resp);
 
     }
