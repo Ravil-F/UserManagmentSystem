@@ -1,4 +1,6 @@
 <%@ page import="java.util.List" %>
+<%@ page import="app.entities.User" %>
+<%@ page import="app.model.Model" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
@@ -19,11 +21,22 @@
                     <h2> Users </h2>
                     <div class="information">
                 <%
-                    List<String> names = (List<String>) request.getAttribute("userNames");
-                    if(names != null && !names.isEmpty()){
+//                    List<String> names = (List<String>) request.getAttribute("userNames");
+//                    List<String> last_names = (List<String>) request.getAttribute("lastNames");
+//                    List<Character> gender = (List<Character>) request.getAttribute("gender");
+//                    List<Integer> age = (List<Integer>) request.getAttribute("age");
+//                    List<String> email = (List<String>) request.getAttribute("email");
+                    List<User> users = (List<User>) request.getAttribute("user");
+
+                    if(users != null && !users.isEmpty()){
                         out.println("<ui>");
-                        for(String s : names){
-                            out.println("<li>" + s + "</li>");
+                        for(User user : users){
+                            out.println("<li>" + user.getName() + " | "
+                                    + user.getLastName() + " | "
+                                    + user.getGender() + " | "
+                                    + user.getAge() + " | "
+                                    + user.getEmail() + " | "
+                                    + "</li>");
                         }
                         out.println("</ui>");
                     }else out.println("<p> There are no users yet!</p>");
@@ -33,7 +46,7 @@
         </main>
 
         <footer>
-            <button onclick="location.href='/adding_viewing_users_war_exploded/'"> Back to main</button>
+            <button onclick="location.href='/UserManagmentSystem_war_exploded/'"> Back to main</button>
         </footer>
 
     </body>
