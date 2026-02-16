@@ -17,23 +17,22 @@
     <main>
         <section>
             <h2>Users</h2>
-            <div>
                 <%
                     List<User> users = (List<User>) request.getAttribute("users");
                     if(users != null && !users.isEmpty()){
-                        out.println("<ui>");
+
                         for(User user : users){
-                            out.println("<li>" + user.getName() + " | "
-                                    + user.getLastName() + " | "
-                                    + user.getGender() + " | "
-                                    + user.getAge() + " | "
-                                    + user.getEmail() + " | "
-                                    + "</li>");
+                            out.println("<div class=\"block\">");
+                            out.println("<div>" + user.getName() + "</div>"
+                                    + "<div>" + user.getLastName() + "</div>"
+                                    + "<div class=\"gender\">" + user.getGender() + "</div>"
+                                    + "<div class=\"age\">" + user.getAge() + "</div>"
+                                    + "<div>" + user.getEmail() + "</div>"
+                                    );
+                            out.println("</div>");
                         }
-                        out.println("</ui>");
                     }else out.println("<p> There are no users yet!</p>");
                 %>
-            </div>
         </section>
 
         <section>
@@ -48,7 +47,7 @@
     </main>
 
     <footer>
-        <button onclick="location.href='/UserManagmentSystem_war_exploded/'" > Back to main</button>
+        <button onclick="location.href='/adding_viewing_users_war_exploded/'" > Back to main</button>
     </footer>
 
 </body>

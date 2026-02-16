@@ -108,6 +108,28 @@ footer button:hover {
   background: #d0d0d0;
 }
 
+.block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  font-size: 1.5rem;
+  border-bottom: 1px solid grey;
+}
+.block:hover {
+  background: #fef5e6;
+}
+.block div {
+  width: 200px;
+  padding: 5px;
+}
+.block .age {
+  width: 50px;
+}
+.block .gender {
+  width: 100px;
+}
+
 main {
   padding: 0px 20px;
 }
@@ -116,6 +138,7 @@ h2 {
   background: #c1d3f0;
   font-size: 3.5rem;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 section {
@@ -123,16 +146,4 @@ section {
   width: 100%;
   -webkit-box-shadow: 0px 0px 10px grey;
           box-shadow: 0px 0px 10px grey;
-}
-
-li {
-  width: 100%;
-  text-align: left;
-  padding: 20px;
-  font-size: 1.3rem;
-  border-bottom: 1px solid grey;
-  list-style-type: none;
-}
-li:hover {
-  background: #fef5e6;
 }

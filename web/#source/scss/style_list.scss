@@ -1,4 +1,4 @@
-@import 'reset', 'header', 'footer';
+@import 'reset', 'header', 'footer', 'block_list';
 
 
 main {
@@ -9,23 +9,11 @@ h2 {
    background: #c1d3f0;
    font-size: 3.5rem;
    text-align: center;
+   margin-bottom: 10px;
 }
 
 section {
    margin: 20px auto;
    width: 100%;
    box-shadow: 0px 0px 10px grey;
-}
-
-li {
-   width: 100%;
-   text-align: left;
-   padding: 20px;
-   font-size: 1.3rem;
-   border-bottom: 1px solid grey;
-   list-style-type: none;
-
-   &:hover {
-      background: #fef5e6;
-   }
 }

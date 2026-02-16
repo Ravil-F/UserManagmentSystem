@@ -1,4 +1,4 @@
-@import 'reset', 'header', 'footer';
+@import 'reset', 'header', 'footer', 'block_list';
 
 
 main {
@@ -6,10 +6,10 @@ main {
 }
 
 h2 {
-   padding: 10px;
    background: #c1d3f0;
    font-size: 3.5rem;
    text-align: center;
+   margin-bottom: 10px;
 }
 
 section {
@@ -51,3 +51,4 @@ form {
       }
    }
 }
+
