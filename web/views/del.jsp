@@ -47,7 +47,7 @@
     </main>
 
     <footer>
-        <button onclick="location.href='/adding_viewing_users_war_exploded/'" > Back to main</button>
+        <button onclick="location.href='/UserManagmentSystem_war_exploded/'" > Back to main</button>
     </footer>
 
 </body>
