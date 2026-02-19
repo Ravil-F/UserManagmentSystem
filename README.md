@@ -67,7 +67,7 @@
 
 ### Способ 1: Запуск через IntelliJ IDEA (рекомендуется)
 1. **Установите Apache Tomcat 11**  
-   Скачайте с [официального сайта](https://tomcat.apache.org/download-11.cgi) и распакуйте в удобную папку (например, `C:\Tomcat 11.0`)
+   * Скачайте с [официального сайта](https://tomcat.apache.org/download-11.cgi) и распакуйте в удобную папку (например, `C:\Tomcat 11.0`)
 
 2. **Клонируйте репозиторий:**
    ```bash
@@ -112,17 +112,17 @@
    mvn clean package
 
 3 **Скопируйте WAR-файл из папки target в папку webapps вашего Tomcat**
-#### Пример для Windows
+   #### Пример для Windows
    * copy target\UserManagementSystem.war C:\Tomcat 11.0\webapps\
 
-#### Пример для Linux/Mac
+   #### Пример для Linux/Mac
    * cp target/UserManagementSystem.war /путь/к/tomcat/webapps/
 
 4. **Запустите Tomcat:**
 
    * bash
-#### Windows
+   #### Windows
    * C:\Tomcat 11.0\bin\startup.bat
 
-#### Linux/Mac
+   #### Linux/Mac
    * /путь/к/tomcat/bin/startup.sh
